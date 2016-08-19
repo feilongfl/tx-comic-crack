@@ -3,6 +3,8 @@ FROM php
 ADD  index.php /var/www/
 ADD  download.php /var/www/
 ADD  com.php /var/www/
+ADD  info.php /var/www/
+
 EXPOSE 8080
 WORKDIR /var/www/
 
