@@ -2,11 +2,11 @@ FROM php
 
 RUN apt update
 RUN apt upgrade -y
-RUN apt install -y python-software-properties
-RUN apt install -y software-properties-common
+RUN apt install -y python-software-properties --force-yes
+RUN apt install -y software-properties-common --force-yes
 RUN apt-add-repository -y ppa:ondrej/php
 RUN apt update
-RUN apt install -y php7.0-zip
+RUN apt install -y php7.0-zip --force-yes
 
 ADD  index.php /var/www/
 ADD  download.php /var/www/
