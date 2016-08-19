@@ -25,12 +25,13 @@ $mid = $_GET["mid"];
 $cid = $_GET["cid"];
 
 //echo $mid,$cid,'</br>';
-mkdir ($mid);
+mkdir ('images');
+mkdir ('images' . '/' . $mid);
 
-if(file_exists($mid . '/' . $cid))
+if(file_exists('images' . '/' . $mid . '/' . $cid))
 {
-    $myfile = fopen($mid . '/' . $cid, "r");
-    $json = fread($myfile,filesize($mid . '/' . $cid));
+    $myfile = fopen('images' . '/' . $mid . '/' . $cid, "r");
+    $json = fread($myfile,filesize('images' . '/' . $mid . '/' . $cid));
     fclose($myfile);
 
     $obj = json_decode($json);
@@ -49,7 +50,7 @@ else
     echo '</br>';
     if (preg_match("/{.*}/i", $content, $json)) {
         //print "A match was found:". $json[0];
-        $myfile = fopen($mid . '/' . $cid, "w");
+        $myfile = fopen('images' . '/' . $mid . '/' . $cid, "w");
         fwrite($myfile, $json[0]);
         fclose($myfile);
         $obj = json_decode($json[0]);
