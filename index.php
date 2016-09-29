@@ -37,8 +37,8 @@ if(file_exists('images' . '/' . $mid . '/' . $cid))
     }
     
   
-  echo '<a class="button is-primary" href="index.php?mid=' . $mid . '&cid=' . ($cid + 1) . '">cid+1</a>';
-  echo '<a class="button is-primary" href="index.php?mid=' . $mid . '&cid=' . ($cid - 1) . '">cid-1</a>';
+  echo '<a class="button is-primary is-fullwidth" href="index.php?mid=' . $mid . '&cid=' . ($cid + 1) . '">cid+1</a>';
+  //echo '<a class="button is-primary" href="index.php?mid=' . $mid . '&cid=' . ($cid - 1) . '">cid-1</a>';
 }
 else
 {
@@ -62,8 +62,8 @@ else
         }
         
   
-  echo '<a class="button is-primary" href="index.php?mid=' . $mid . '&cid=' . ($cid + 1) . '">cid+1</a>';
-  echo '<a class="button is-primary" href="index.php?mid=' . $mid . '&cid=' . ($cid - 1) . '">cid-1</a>';
+  echo '<a class="button is-primary is-fullwidth" href="index.php?mid=' . $mid . '&cid=' . ($cid + 1) . '">cid+1</a>';
+  //echo '<a class="button is-primary" href="index.php?mid=' . $mid . '&cid=' . ($cid - 1) . '">cid-1</a>';
     } else {
         print '<div class="notification is-danger"><button class="delete"></button>comic not found.</div>';
     }
