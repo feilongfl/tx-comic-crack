@@ -31,7 +31,7 @@ if(file_exists('images' . '/' . $mid . '/' . $cid))
     preg_match_all("/.{40}/i", $basecode, $pid);
     //print_r($pid);
     foreach ($pid[0] as $p) {
-        echo '<div class="tile is-parent"><article class="tile is-child notification is-info"><p class="title">1</p><figure class="image is-4by3">';
+        echo '<div class="tile is-parent"><article class="tile is-child notification is-info"><p class="title">' . $p . '</p><figure class="image is-4by3">';
         echo '<img src="http://www.beihaiw.com/pic.php?url=http://imgsrc.baidu.com/forum/pic/item/' . $p . '.jpg"></br>';
         echo '</figure></article></div></div>';
     }
@@ -52,7 +52,7 @@ else
         preg_match_all("/.{40}/i", $basecode, $pid);
         //print_r($pid);
         foreach ($pid[0] as $p) {
-            echo '<div class="tile is-parent"><article class="tile is-child notification is-info"><p class="title">1</p><figure class="image is-4by3">';
+            echo '<div class="tile is-parent"><article class="tile is-child notification is-info"><p class="title">' . $p . '</p><figure class="image is-4by3">';
             echo '<img src="http://www.beihaiw.com/pic.php?url=http://imgsrc.baidu.com/forum/pic/item/' . $p . '.jpg"></br>';
             echo '</figure></article></div></div>';
         }
