@@ -62,17 +62,8 @@ else
 }
 
   
-  echo '<a class="button is-info" href="index.php?mid=537667&cid=';
-  echo $cid + 1
-  echo '">';
-  echo 'cid + 1'
-  echo '</a>';
-  
-  echo '<a class="button is-info" href="index.php?mid=537667&cid=';
-  echo $cid - 1
-  echo '">';
-  echo 'cid - 1'
-  echo '</a>';
+  echo '<a class="button is-primary" href="index.php?mid=' . $mid . '&cid=' . ($cid + 1) . '">cid+1</a>';
+  echo '<a class="button is-primary" href="index.php?mid=' . $mid . '&cid=' . ($cid - 1) . '">cid-1</a>';
 ?>
   
 
