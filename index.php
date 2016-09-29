@@ -30,6 +30,7 @@ if(file_exists('images' . '/' . $mid . '/' . $cid))
     $basecode = $obj->{'base'};
     preg_match_all("/.{40}/i", $basecode, $pid);
     //print_r($pid);
+    echo '<a class="button is-primary is-fullwidth" href="index.php?mid=' . $mid . '&cid=' . ($cid - 1) . '">cid-1</a>';
     foreach ($pid[0] as $p) {
         echo '<div class="tile is-parent"><article class="tile is-child notification is-info"><p class="title">' . $p . '</p><figure class="image is-4by3">';
         echo '<img src="http://www.beihaiw.com/pic.php?url=http://imgsrc.baidu.com/forum/pic/item/' . $p . '.jpg"></br>';
@@ -38,7 +39,7 @@ if(file_exists('images' . '/' . $mid . '/' . $cid))
     
   
   echo '<a class="button is-primary is-fullwidth" href="index.php?mid=' . $mid . '&cid=' . ($cid + 1) . '">cid+1</a>';
-  //echo '<a class="button is-primary" href="index.php?mid=' . $mid . '&cid=' . ($cid - 1) . '">cid-1</a>';
+  
 }
 else
 {
@@ -55,6 +56,7 @@ else
         $basecode = $obj->{'base'};
         preg_match_all("/.{40}/i", $basecode, $pid);
         //print_r($pid);
+        echo '<a class="button is-primary is-fullwidth" href="index.php?mid=' . $mid . '&cid=' . ($cid - 1) . '">cid-1</a>';
         foreach ($pid[0] as $p) {
             echo '<div class="tile is-parent"><article class="tile is-child notification is-info"><p class="title">' . $p . '</p><figure class="image is-4by3">';
             echo '<img src="http://www.beihaiw.com/pic.php?url=http://imgsrc.baidu.com/forum/pic/item/' . $p . '.jpg"></br>';
