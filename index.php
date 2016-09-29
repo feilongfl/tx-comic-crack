@@ -35,6 +35,10 @@ if(file_exists('images' . '/' . $mid . '/' . $cid))
         echo '<img src="http://www.beihaiw.com/pic.php?url=http://imgsrc.baidu.com/forum/pic/item/' . $p . '.jpg"></br>';
         echo '</figure></article></div></div>';
     }
+    
+  
+  echo '<a class="button is-primary" href="index.php?mid=' . $mid . '&cid=' . ($cid + 1) . '">cid+1</a>';
+  echo '<a class="button is-primary" href="index.php?mid=' . $mid . '&cid=' . ($cid - 1) . '">cid-1</a>';
 }
 else
 {
@@ -56,14 +60,15 @@ else
             echo '<img src="http://www.beihaiw.com/pic.php?url=http://imgsrc.baidu.com/forum/pic/item/' . $p . '.jpg"></br>';
             echo '</figure></article></div></div>';
         }
+        
+  
+  echo '<a class="button is-primary" href="index.php?mid=' . $mid . '&cid=' . ($cid + 1) . '">cid+1</a>';
+  echo '<a class="button is-primary" href="index.php?mid=' . $mid . '&cid=' . ($cid - 1) . '">cid-1</a>';
     } else {
         print '<div class="notification is-danger"><button class="delete"></button>comic not found.</div>';
     }
 }
 
-  
-  echo '<a class="button is-primary" href="index.php?mid=' . $mid . '&cid=' . ($cid + 1) . '">cid+1</a>';
-  echo '<a class="button is-primary" href="index.php?mid=' . $mid . '&cid=' . ($cid - 1) . '">cid-1</a>';
 ?>
   
 
