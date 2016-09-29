@@ -1,25 +1,16 @@
-<head>
+<html>
+  <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.1/css/bulma.css" />
     <title>
         tx-crack
     </title>
 </head>
 <body>
+  <div class="notification is-danger">
+      <button class="delete"></button>
+      本网站仅供学习交流使用！！
+    </div>
 <?php
-/**
- * Created by PhpStorm.
- * User: fei_l
- * Date: 2016-08-18
- * Time: 17:24
- */
-/*
- //openssl test
-$w = stream_get_wrappers();
-echo 'openssl: ',  extension_loaded  ('openssl') ? 'yes':'no', "\n";
-echo 'http wrapper: ', in_array('http', $w) ? 'yes':'no', "\n";
-echo 'https wrapper: ', in_array('https', $w) ? 'yes':'no', "\n";
-echo 'wrappers: ', var_dump($w);
- */
-//phpinfo();
 
 $mid = $_GET["mid"];
 $cid = $_GET["cid"];
@@ -40,7 +31,9 @@ if(file_exists('images' . '/' . $mid . '/' . $cid))
     preg_match_all("/.{40}/i", $basecode, $pid);
     //print_r($pid);
     foreach ($pid[0] as $p) {
+        echo '<div class="tile is-parent"><article class="tile is-child notification is-info"><p class="title">1</p><figure class="image is-4by3">';
         echo '<img src="http://www.beihaiw.com/pic.php?url=http://imgsrc.baidu.com/forum/pic/item/' . $p . '.jpg"></br>';
+        echo '</figure></article></div></div>';
     }
 }
 else
@@ -59,11 +52,15 @@ else
         preg_match_all("/.{40}/i", $basecode, $pid);
         //print_r($pid);
         foreach ($pid[0] as $p) {
+            echo '<div class="tile is-parent"><article class="tile is-child notification is-info"><p class="title">1</p><figure class="image is-4by3">';
             echo '<img src="http://www.beihaiw.com/pic.php?url=http://imgsrc.baidu.com/forum/pic/item/' . $p . '.jpg"></br>';
+            echo '</figure></article></div></div>';
         }
     } else {
-        print "comic not found.";
+        print '<div class="notification is-danger"><button class="delete"></button>comic not found.</div>';
     }
 }
 ?>
+
 </body>
+</html>
