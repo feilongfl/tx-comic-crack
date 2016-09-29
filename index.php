@@ -60,7 +60,22 @@ else
         print '<div class="notification is-danger"><button class="delete"></button>comic not found.</div>';
     }
 }
+
+  
+  echo '<a class="button is-info" href="index.php?mid=537667&cid=';
+  echo $cid + 1
+  echo '">';
+  echo cid + 1
+  echo '</a>';
+  
+  echo '<a class="button is-info" href="index.php?mid=537667&cid=';
+  echo $cid - 1
+  echo '">';
+  echo cid - 1
+  echo '</a>';
 ?>
+  
+
 
 </body>
 </html>
